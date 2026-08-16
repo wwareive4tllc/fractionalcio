@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Production &amp; Streaming | E4T LLC</title>
+<meta name="description" content="Professional audiovisual production, livestreaming, and technical direction for conventions, conferences, and ministry events. Multi-camera production from E4T LLC (Enterprize 4 Technologies).">
+<meta property="og:title" content="Live Production &amp; Streaming — E4T LLC">
+<meta property="og:description" content="Multi-camera live production, livestreaming, and technical direction for conventions, conferences, and ministry events.">
+<meta property="og:type" content="website">
+<style>
+:root{
+  --ink:#12181f;
+  --ink-soft:#4a5560;
+  --line:#e2e6ea;
+  --bg:#ffffff;
+  --bg-alt:#f6f8fa;
+  --accent:#1a4d7a;
+  --accent-dark:#0f3554;
+  --gold:#b8862b;
+  --max:1080px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);z-index:50}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{font-weight:700;font-size:1.15rem;letter-spacing:-.02em;color:var(--ink)}
+.brand span{color:var(--accent)}
+.navlinks{display:flex;gap:26px;font-size:.93rem;align-items:center}
+.navlinks a{color:var(--ink-soft);font-weight:500}
+.navlinks a:hover{color:var(--accent);text-decoration:none}
+.navlinks a.on{color:var(--accent);font-weight:650}
+@media(max-width:820px){
+  .navlinks a.sec{display:none}
+  .navlinks{gap:18px;font-size:.88rem}
+}
+@media(max-width:400px){.navlinks{gap:13px;font-size:.82rem}}
+
+/* cross-promo band */
+.xpromo{background:var(--accent-dark);color:#fff}
+.xpromo .inner{display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap}
+.xpromo h2{color:#fff;font-size:1.5rem;margin-bottom:8px}
+.xpromo p{color:#c3d6e6;max-width:56ch;font-size:1rem}
+.xpromo .btn{background:#fff;color:var(--accent-dark);border-color:#fff;white-space:nowrap}
+.xpromo .btn:hover{background:#eaf1f7}
+
+.hero{padding:80px 0 68px;background:linear-gradient(180deg,#0f3554 0%,#1a4d7a 100%);color:#fff}
+.eyebrow{
+  display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  color:#c3d6e6;background:rgba(255,255,255,.12);padding:6px 13px;border-radius:3px;margin-bottom:22px;
+}
+h1{font-size:clamp(2rem,4.6vw,3.05rem);line-height:1.14;letter-spacing:-.028em;font-weight:750;max-width:20ch}
+.hero .lede{font-size:1.16rem;color:#d3e2ee;margin-top:22px;max-width:64ch}
+.cta-row{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:13px 26px;border-radius:5px;font-weight:600;font-size:.97rem;
+  background:var(--accent);color:#fff;border:1px solid var(--accent);transition:background .15s;
+}
+.btn:hover{background:var(--accent-dark);text-decoration:none}
+.btn.light{background:#fff;color:var(--accent-dark);border-color:#fff}
+.btn.light:hover{background:#eaf1f7}
+.btn.ghost-l{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+.btn.ghost-l:hover{background:rgba(255,255,255,.1);text-decoration:none}
+
+section{padding:70px 0;border-top:1px solid var(--line)}
+section.alt{background:var(--bg-alt)}
+h2{font-size:1.8rem;letter-spacing:-.022em;font-weight:700;margin-bottom:14px}
+.sub{color:var(--ink-soft);max-width:64ch;margin-bottom:36px;font-size:1.04rem}
+h3{font-size:1.06rem;font-weight:650;margin-bottom:8px;letter-spacing:-.01em}
+
+.grid{display:grid;gap:24px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:860px){.g2,.g3{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:7px;padding:24px}
+.card p{color:var(--ink-soft);font-size:.95rem}
+
+/* packages */
+.pkg{background:#fff;border:1px solid var(--line);border-radius:7px;padding:26px;display:flex;flex-direction:column;position:relative}
+.pkg.featured{border:2px solid var(--accent)}
+.tag{
+  position:absolute;top:-11px;left:26px;background:var(--accent);color:#fff;
+  font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 11px;border-radius:3px;
+}
+.pkg .price{font-size:1.42rem;font-weight:700;color:var(--accent);margin:9px 0 12px;letter-spacing:-.02em}
+.pkg .price small{font-size:.8rem;font-weight:500;color:var(--ink-soft);display:block;letter-spacing:0}
+.pkg p{color:var(--ink-soft);font-size:.94rem;flex:1}
+ul.ticks{list-style:none;margin-top:13px}
+ul.ticks li{padding-left:21px;position:relative;font-size:.92rem;color:var(--ink-soft);margin-bottom:6px}
+ul.ticks li::before{content:"";position:absolute;left:0;top:.6em;width:7px;height:7px;border-radius:50%;background:var(--gold)}
+
+/* kit */
+.kit{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:0;border:1px solid var(--line);border-radius:7px;overflow:hidden;background:#fff}
+.kit div{padding:13px 18px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);font-size:.91rem;color:var(--ink-soft)}
+.kit div b{color:var(--ink);display:block;font-size:.94rem;font-weight:600}
+
+/* case */
+.case{background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:7px;padding:30px}
+.stats{display:flex;gap:34px;flex-wrap:wrap;margin:22px 0 4px}
+.stat .n{font-size:1.85rem;font-weight:800;color:var(--accent);letter-spacing:-.03em;line-height:1.1}
+.stat .l{font-size:.83rem;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.05em;font-weight:600}
+
+.note{font-size:.9rem;color:var(--ink-soft);margin-top:18px;padding-left:14px;border-left:2px solid var(--line)}
+
+/* timeline */
+.tl{margin-top:26px;position:relative;padding-left:0}
+.tl .row{display:flex;gap:20px;align-items:flex-start;padding:15px 0;border-bottom:1px solid var(--line)}
+.tl .row:last-child{border-bottom:none}
+.tl .yr{
+  flex:0 0 66px;font-size:1.12rem;font-weight:800;color:var(--accent);
+  letter-spacing:-.02em;line-height:1.5;
+}
+.tl .loc{flex:0 0 190px;font-weight:650;font-size:.98rem;color:var(--ink)}
+.tl .loc span{display:block;font-weight:500;font-size:.85rem;color:var(--ink-soft)}
+.tl .desc{flex:1;font-size:.93rem;color:var(--ink-soft);min-width:200px}
+@media(max-width:720px){
+  .tl .row{flex-wrap:wrap;gap:6px 16px}
+  .tl .yr{flex:0 0 auto}
+  .tl .loc{flex:1 0 auto}
+  .tl .desc{flex:1 1 100%}
+}
+
+.cta-final{background:var(--accent-dark);color:#fff;text-align:center}
+.cta-final h2{color:#fff}
+.cta-final p{color:#c3d6e6;max-width:58ch;margin:0 auto 30px;font-size:1.05rem}
+.contact-line{margin-top:24px;font-size:1rem;color:#c3d6e6}
+
+footer{padding:32px 0;font-size:.89rem;color:var(--ink-soft);border-top:1px solid var(--line)}
+.footrow{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">E4T <span>LLC</span></div>
+    <nav class="navlinks">
+      <a href="index.html">Fractional CIO</a>
+      <a href="production.html" class="on">Live Production</a>
+      <a href="#packages" class="sec">Packages</a>
+      <a href="#equipment" class="sec">Equipment</a>
+      <a href="#contact" class="sec">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Live Production &amp; Streaming &middot; Since 2020</span>
+    <h1>Seven straight national conventions. Nine events. Zero missed sessions.</h1>
+    <p class="lede">
+      Multi-camera live production, livestreaming, technical direction, and creative content —
+      delivered by a team that brings the equipment, builds the system on site, and runs it for
+      the length of your event &mdash; on site, hybrid, or entirely remote. Nine conventions since 2020.
+    </p>
+    <div class="cta-row">
+      <a class="btn light" href="#contact">Request a quote</a>
+      <a class="btn ghost-l" href="#packages">See packages</a>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>What we do</h2>
+    <p class="sub">
+      Full-service production, from system design through load-out. You provide the venue, power,
+      internet, and your program. We handle everything between the stage and the stream.
+    </p>
+    <div class="grid g3">
+      <div class="card">
+        <h3>Technical direction</h3>
+        <p>A lead video engineer directing the production live — switching, ISO recording, monitoring signal and stream health, and troubleshooting in real time so your team can focus on the program.</p>
+      </div>
+      <div class="card">
+        <h3>Multi-camera video</h3>
+        <p>Cinema cameras and remote-operated PTZ, mixed live through a broadcast switcher. Wireless video transmission where cable runs aren't practical.</p>
+      </div>
+      <div class="card">
+        <h3>Livestreaming</h3>
+        <p>Simultaneous delivery to your platforms — YouTube, Facebook, custom RTMP destinations — with redundant encoding and monitored bitrate.</p>
+      </div>
+      <div class="card">
+        <h3>Graphics &amp; presentation</h3>
+        <p>Dedicated operator running lower thirds, lyrics, scripture, sermon slides, and program graphics in sync with the live production.</p>
+      </div>
+      <div class="card">
+        <h3>Creative production</h3>
+        <p>Event branding, motion graphics, bumper videos, and recap content — built before the event and delivered ready to air.</p>
+      </div>
+      <div class="card">
+        <h3>Recording &amp; delivery</h3>
+        <p>ISO recording of every camera plus the program feed, captured to SSD and delivered after the event for archive, rebroadcast, or editing.</p>
+      </div>
+      <div class="card">
+        <h3>Remote &amp; virtual production</h3>
+        <p>Full production directed remotely, with hosts and participants in different cities. We've run a two-day convention from Phoenix with the host in Cincinnati and an audience spread across two time zones &mdash; no travel required, no gear to ship.</p>
+      </div>
+      <div class="card">
+        <h3>Hybrid production</h3>
+        <p>In-room and online audiences served at once, including coordination with your existing on-site production team or an on-grounds vendor. We've produced a national convention remotely alongside a separate company working the floor &mdash; two teams, two cities, one broadcast.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="packages">
+  <div class="wrap">
+    <h2>Packages</h2>
+    <p class="sub">
+      Starting prices for common event shapes. Every event gets an itemized quote — services and
+      pass-through costs listed separately, so you see exactly what you're paying for.
+    </p>
+
+    <div class="grid g3" style="margin-bottom:44px">
+      <div class="pkg">
+        <h3>Single Service or Event</h3>
+        <div class="price">from $1,850<small>one production day &middot; local</small></div>
+        <p>A single service, program, or one-day event in the Phoenix metro.</p>
+        <ul class="ticks">
+          <li>Technical direction</li>
+          <li>Up to 3 cameras</li>
+          <li>Livestream to 1&ndash;2 destinations</li>
+          <li>Graphics operation</li>
+          <li>Recording delivered after</li>
+        </ul>
+      </div>
+      <div class="pkg featured">
+        <span class="tag">Most requested</span>
+        <h3>Weekend Conference</h3>
+        <div class="price">from $4,900<small>two to three production days</small></div>
+        <p>Multi-session conferences, revivals, and weekend gatherings.</p>
+        <ul class="ticks">
+          <li>Everything in Single Event</li>
+          <li>Expanded multi-camera</li>
+          <li>Dedicated graphics operator</li>
+          <li>Load-in, configuration, testing</li>
+          <li>ISO recording all cameras</li>
+        </ul>
+      </div>
+      <div class="pkg">
+        <h3>Multi-Day Convention</h3>
+        <div class="price">from $16,500<small>up to seven production days</small></div>
+        <p>National conventions and multi-day events, on site or traveling.</p>
+        <ul class="ticks">
+          <li>Full production crew</li>
+          <li>Cinema + PTZ camera package</li>
+          <li>Creative production included</li>
+          <li>Full setup and teardown</li>
+          <li>Travel quoted at cost</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid g2" style="margin-bottom:24px">
+      <div class="pkg featured" style="grid-column:1 / -1">
+        <span class="tag">No travel required</span>
+        <h3>Virtual &amp; Remote Convention &mdash; from $2,800</h3>
+        <div class="price" style="font-size:1.1rem;margin:6px 0 10px"><small style="display:inline;font-size:.92rem;color:var(--ink-soft);font-weight:500">Two days, multi-session &middot; produced entirely remotely</small></div>
+        <p>Your event runs from wherever your people are. We direct the production from our facility, bring the hosts and participants together across cities and time zones, run graphics and program flow, stream it live, and deliver the recordings &mdash; without a single travel or equipment line on the invoice.</p>
+        <ul class="ticks">
+          <li>Remote technical direction and switching</li>
+          <li>Multi-site host and participant integration</li>
+          <li>Cross-time-zone scheduling and coordination</li>
+          <li>Graphics, lower thirds, and program flow</li>
+          <li>Live streaming to your platforms</li>
+          <li>Rehearsal and connection testing in advance</li>
+          <li>Recordings delivered after each session</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid g2">
+      <div class="card">
+        <h3>Production Retainer &mdash; from $1,200/month</h3>
+        <p>Recurring weekly service coverage, remote production support, and ongoing graphics and template maintenance. For organizations streaming regularly who want consistency without hiring a production staff.</p>
+      </div>
+      <div class="card">
+        <h3>Hybrid Event &mdash; quoted</h3>
+        <p>In-room and online audiences served simultaneously, including coordination with your existing production team or an on-grounds vendor. Priced by session count, locations, and how much of the floor we're running.</p>
+      </div>
+      <div class="card">
+        <h3>District &amp; Regional Convention &mdash; from $6,900</h3>
+        <p>Wednesday-through-Sunday district conventions and regional gatherings. The same production standard as a national event, scaled and priced for a district budget &mdash; multi-camera, streaming, graphics, and full setup and teardown.</p>
+      </div>
+      <div class="card">
+        <h3>System Design &amp; Installation &mdash; quoted</h3>
+        <p>Design and specification of a permanent in-house production system: cameras, switching, audio, networking, and streaming infrastructure — with vendor selection, commissioning, and training for your volunteers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="equipment">
+  <div class="wrap">
+    <h2>Equipment we bring</h2>
+    <p class="sub">
+      A production-grade kit, configured and tested before it ships. Equipment is quoted at cost
+      plus a coordination fee &mdash; never marked up as a profit center.
+    </p>
+    <div class="kit">
+      <div><b>Sony FX3 cinema cameras</b>Full-frame, low-light capable</div>
+      <div><b>PTZOptics 30X NDI</b>Remote-operated PTZ cameras</div>
+      <div><b>ATEM SDI Extreme ISO</b>Broadcast switcher with ISO record</div>
+      <div><b>vMix production software</b>Licensed per engagement</div>
+      <div><b>Hollyland Cosmo C2</b>Wireless HDMI/SDI video transmission</div>
+      <div><b>Sony FE 16-35mm f/2.8 GM</b>Professional wide-angle glass</div>
+      <div><b>DJI RS 2 gimbal</b>Stabilized moving camera work</div>
+      <div><b>Stream Deck XL</b>Production control surface</div>
+      <div><b>Zoom AMS-44 interface</b>Audio integration from house console</div>
+      <div><b>Wireless microphone systems</b>Presenter and roving audio</div>
+      <div><b>Netgear M4250 AV switch</b>PoE++ AV-over-IP networking</div>
+      <div><b>Production workstations</b>Mac and Windows, redundant</div>
+      <div><b>Manfrotto support</b>Fluid-head tripods and camera support</div>
+      <div><b>SSD recording media</b>ISO capture and archive delivery</div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>Nine conventions. On site, hybrid, and fully remote.</h2>
+    <p class="sub">
+      E4T has been the production partner for the Church of the Living God National Convention
+      every year since 2020 &mdash; starting with a fully virtual convention during the pandemic,
+      moving through a hybrid year, and running the full on-site production every year since.
+      Three delivery models, seven consecutive years, one client who has never had to look
+      elsewhere.
+    </p>
+
+    <div class="case">
+      <div class="stats" style="margin-top:0">
+        <div class="stat"><div class="n">9</div><div class="l">Conventions produced</div></div>
+        <div class="stat"><div class="n">7</div><div class="l">Consecutive years</div></div>
+        <div class="stat"><div class="n">3</div><div class="l">Delivery models</div></div>
+        <div class="stat"><div class="n">100%</div><div class="l">Sessions streamed</div></div>
+      </div>
+
+      <div class="tl">
+        <div class="row">
+          <div class="yr">2026</div>
+          <div class="loc">St. Louis, Missouri<span>National Convention</span></div>
+          <div class="desc">Seven production days. Cinema and PTZ multi-camera package, ISO recording, dedicated graphics and presentation operation, creative production, full load-in and load-out.</div>
+        </div>
+        <div class="row">
+          <div class="yr">2026</div>
+          <div class="loc">Virtual &mdash; produced from Phoenix<span>District 5 Convention</span></div>
+          <div class="desc">Two-day virtual convention, four sessions, produced entirely remotely. Far-end host in Cincinnati, Ohio with participants across the Central and Eastern time zones. No travel, no equipment shipped.</div>
+        </div>
+        <div class="row">
+          <div class="yr">2025</div>
+          <div class="loc">Orlando, Florida<span>National Convention</span></div>
+          <div class="desc">Full production services including technical direction, live video production, livestreaming, and complete on-site system build.</div>
+        </div>
+        <div class="row">
+          <div class="yr">2025</div>
+          <div class="loc">San Bernardino, California<span>District 11 Convention</span></div>
+          <div class="desc">Wednesday through Sunday. Full live production and streaming for a district-level convention &mdash; the same production standard at regional scale.</div>
+        </div>
+        <div class="row">
+          <div class="yr">2024</div>
+          <div class="loc">Dallas, Texas<span>National Convention</span></div>
+          <div class="desc">Multi-camera live production, streaming, graphics operation, and recording across the convention program.</div>
+        </div>
+        <div class="row">
+          <div class="yr">2023</div>
+          <div class="loc">Frisco, Texas<span>National Convention</span></div>
+          <div class="desc">Live production and streaming services, on-site system deployment, technical direction.</div>
+        </div>
+        <div class="row">
+          <div class="yr">2022</div>
+          <div class="loc">St. Louis, Missouri<span>National Convention</span></div>
+          <div class="desc">Live production and streaming services for the national convention program.</div>
+        </div>
+        <div class="row">
+          <div class="yr">2021</div>
+          <div class="loc">Hybrid &mdash; Phoenix &amp; St. Louis<span>National Convention</span></div>
+          <div class="desc">Hybrid national convention produced remotely from Phoenix in coordination with an on-grounds production company in St. Louis. Remote direction, streaming, and program integration across two production teams and two locations.</div>
+        </div>
+        <div class="row">
+          <div class="yr">2020</div>
+          <div class="loc">Fully virtual &mdash; nationwide<span>National Convention</span></div>
+          <div class="desc">The first one. A 100% virtual national convention produced during the COVID-19 pandemic, with participants across the continental United States and no in-person gathering at all. Built and directed from Phoenix when the alternative was not holding the convention.</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="note">
+      Five consecutive national rebookings, plus district-level work. References available on request.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Why E4T</h2>
+    <div class="grid g2">
+      <div class="card">
+        <h3>We're engineers first</h3>
+        <p>E4T's principal has spent 19+ years running enterprise networks and infrastructure. When a stream drops, the problem is usually the network — and we already know how to find it.</p>
+      </div>
+      <div class="card">
+        <h3>We understand ministry events</h3>
+        <p>Six years leading technology for a national multi-site ministry. We know how a service actually flows, when not to cut, and how to work alongside a volunteer team rather than around them.</p>
+      </div>
+      <div class="card">
+        <h3>Transparent quoting</h3>
+        <p>Services and pass-through costs are listed separately on every quote. You see what's labor, what's equipment, and what's travel — no bundled numbers hiding markup.</p>
+      </div>
+      <div class="card">
+        <h3>We get asked back</h3>
+        <p>Seven consecutive years producing the same national convention &mdash; through a fully virtual year, a hybrid year, and five on-site productions. Anyone can win a first booking. Seven in a row, across three different delivery models, is delivery.</p>
+      </div>
+      <div class="card">
+        <h3>We started in the hard version</h3>
+        <p>Our first national convention was produced entirely over video during the 2020 pandemic, with participants scattered across the country and no venue at all. Every format since has been easier than the one we began with.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="xpromo">
+  <div class="wrap inner">
+    <div>
+      <h2>We also provide fractional CIO services</h2>
+      <p>Executive IT leadership for nonprofits, ministries, school districts, and small public agencies &mdash; strategy, cybersecurity governance, and vendor oversight without the full-time hire.</p>
+    </div>
+    <a class="btn" href="index.html">See Fractional CIO &rarr;</a>
+  </div>
+</section>
+
+<section class="cta-final" id="contact">
+  <div class="wrap">
+    <h2>Tell us about your event</h2>
+    <p>
+      Send dates, venue, expected sessions, and what you're hoping to stream. You'll get an
+      itemized quote with services and pass-through costs listed separately.
+    </p>
+    <a class="btn light" href="mailto:willie.ware@e4tllc.com?subject=Live%20Production%20Inquiry">Email willie.ware@e4tllc.com</a>
+    <div class="contact-line">
+      Inquiries are typically answered within one business day.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footrow">
+    <div>&copy; 2026 E4T LLC (Enterprize 4 Technologies LLC) · Arizona limited liability company</div>
+    <div>willie.ware@e4tllc.com</div>
+  </div>
+</footer>
+
+</body>
+</html>
